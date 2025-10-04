@@ -1,0 +1,87 @@
+/* Minimal styles */
+:root {
+  --bg: #0f172a;
+  --fg: #e2e8f0;
+  --primary: #0891b2;
+  --muted: #334155;
+  --success: #16a34a;
+  --danger: #dc2626;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji",
+    "Segoe UI Emoji";
+  background: var(--bg);
+  color: var(--fg);
+}
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+button {
+  background: var(--primary);
+  color: #fff;
+  border: 0;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+input,
+select,
+textarea {
+  background: #0b1220;
+  color: var(--fg);
+  border: 1px solid var(--muted);
+  border-radius: 6px;
+  padding: 8px;
+}
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px;
+}
+.card {
+  border: 1px solid var(--muted);
+  border-radius: 10px;
+  padding: 16px;
+  background: #0b1220;
+}
+.row {
+  display: flex;
+  gap: 16px;
+}
+.grid {
+  display: grid;
+  gap: 16px;
+}
+.grid-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  border: 1px solid var(--muted);
+}
+.badge.success {
+  border-color: var(--success);
+  color: var(--success);
+}
+.badge.danger {
+  border-color: var(--danger);
+  color: var(--danger);
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table th,
+.table td {
+  border-bottom: 1px solid var(--muted);
+  padding: 8px;
+  text-align: left;
+}
